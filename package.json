@@ -1,0 +1,30 @@
+{
+  "name": "yoms-app",
+  "version": "0.0.0",
+  "description": "Yoms Front End App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eorlundgraymane/yoms-app.git"
+  },
+  "author": "Roshan K Menon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eorlundgraymane/yoms-app/issues"
+  },
+  "homepage": "https://github.com/Eorlundgraymane/yoms-app#readme",
+  "dependencies": {
+    "axios": "^1.2.0",
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
