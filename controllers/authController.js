@@ -58,7 +58,7 @@ exports.signUpUser = (req, res) => {
       res.send(response.data);
     })
     .catch((err) => {
-      console.log(err.data);
+      console.log(err);
       if (err.status == 403) {
         res.status(403).send(err.data);
       } else {
