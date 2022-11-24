@@ -48,8 +48,8 @@ exports.signUpUser = (req, res) => {
   let url = "/user/create";
   let config = {
     method: "POST",
-    // baseURL: "https://yoms-api.herokuapp.com/",
-    baseURL: "http://localhost:3001/",
+    baseURL: "https://yoms-api.herokuapp.com/",
+    // baseURL: "http://localhost:3001/",
   };
   axios
     .post(url, payLoad, config)
