@@ -60,9 +60,9 @@ exports.signUpUser = (req, res) => {
     .catch((err) => {
       console.log(err);
       if (err.status == 403) {
-        res.status(403).send(err.response.data);
+        res.status(403).send(err);
       } else {
-        res.status(500).send(err.response.data);
+        res.status(500).send(err);
       }
     });
 };
