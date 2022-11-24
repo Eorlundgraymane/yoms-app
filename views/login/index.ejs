@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yoms Bank</title>
 </head>
-<body>
-    <form action="/auth/login" method="post">
+<body>    
+    <form>
         <input placeholder="username" type="text" name="username" id="username">
         <input placeholder="password" type="text" name="password" id="password">
-        <button type="submit">Login</button>
+        <button type="button" onclick="login()">Login</button>     
+        <button type="button" onclick="signUp()">SignUp</button>        
     </form>
+        <script src="/jquery.min.js"></script>
+        <script src="/script.js"></script>
 </body>
 </html>

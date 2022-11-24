@@ -14,7 +14,11 @@ const PORT = process.env.PORT || 3000;
 //Parsing Request Body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(session({secret:"RKSecret",resave:false,saveUninitialized:false}))
+app.use(
+  session({ secret: "RKSecret", resave: false, saveUninitialized: false })
+);
+console.log(__dirname + "\\public\\Scripts");
+app.use(express.static(__dirname + "\\public\\Scripts"));
 
 app.set("view engine", "ejs");
 app.set("views", "views");
