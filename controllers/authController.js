@@ -22,9 +22,12 @@ exports.loginUser = (req, res) => {
         params.user = user;
         res.render("home", params);
       }
+      else {
+        res.status(403).send("Username or Password Incorrect");
+      }
     })
     .catch((err) => {
       console.log(err);
-      res.send(err.data);
+      res.status(500).send(err.data);
     });
 };
