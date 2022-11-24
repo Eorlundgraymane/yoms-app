@@ -28,6 +28,11 @@ exports.loginUser = (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.status(500).send(err.data);
+      if (err.status == 403) {
+        res.status(403).send("Username or Password Incorrect");
+      }
+      else {
+       res.status(500).send(err.data); 
+      }      
     });
 };
