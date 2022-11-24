@@ -58,11 +58,11 @@ exports.signUpUser = (req, res) => {
       res.send(response.data);
     })
     .catch((err) => {
-      console.log(err);
+      console.log(err.response);
       if (err.status == 403) {
-        res.status(403).send(err);
+        res.status(403).send(err.response);
       } else {
-        res.status(500).send(err);
+        res.status(500).send(err.response);
       }
     });
 };
