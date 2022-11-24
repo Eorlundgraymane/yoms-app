@@ -11,7 +11,7 @@ exports.loginUser = (req, res) => {
   let config = {
     data: payLoad,
     method: "GET",
-    baseURL: "http://localhost:3001/",
+    baseURL: "https://yoms-api.herokuapp.com/",
   };
   axios
     .get(url, config)
