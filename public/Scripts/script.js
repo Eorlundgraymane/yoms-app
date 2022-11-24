@@ -24,7 +24,6 @@ const login = () => {
   });
 };
 
-
 const signUp = () => {
   let username = $("#username").val();
   let password = $("#password").val();
@@ -35,11 +34,11 @@ const signUp = () => {
 
   let signUpSuccess = (response) => {
     console.log(response);
-    alert("Signed Up!");
+    alert(response.responseJSON);
   };
   let signUpFail = (response) => {
     console.log(response);
-    alert(response.data);
+    alert(response.responseJSON);
   };
 
   $.ajax({
