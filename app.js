@@ -4,6 +4,7 @@ const app = express();
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const session = require("express-session");
+const path = require("path");
 
 //Main Router
 const mainRouter = require("./routers/mainRouter");
@@ -17,11 +18,12 @@ app.use(bodyParser.json());
 app.use(
   session({ secret: "RKSecret", resave: false, saveUninitialized: false })
 );
-console.log(__dirname + "\\public\\Scripts");
-app.use(express.static(__dirname + "\\public\\Scripts"));
 
 app.set("view engine", "ejs");
 app.set("views", "views");
+
+console.log(__dirname + "\\public\\Scripts");
+app.use(express.static(path.join(__dirname, "public","Scripts")));
 
 //Request Filter and Sanitizer
 app.use((req, res, next) => {
