@@ -39,7 +39,7 @@ const signUp = () => {
   };
   let signUpFail = (response) => {
     console.log(response);
-    alert(response.data);
+    alert(response.response.data);
   };
 
   $.ajax({
